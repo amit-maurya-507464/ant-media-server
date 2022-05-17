@@ -497,7 +497,8 @@ video {
 
 	var appName = location.pathname.substring(0, location.pathname.lastIndexOf("/")+1);
 	var path =  location.hostname + ":" + location.port + appName + "websocket?rtmpForward=" + rtmpForward;
-	var websocketURL =  "ws://" + path;
+	//var websocketURL =  "ws://" + path;
+	var websocketURL =  "wss://" + path;
 	
 	if (location.protocol.startsWith("https")) {
 		websocketURL = "wss://" + path;
